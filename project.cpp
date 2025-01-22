@@ -300,3 +300,21 @@ void runGame()
 
             if(map[bomb.pos.y][bomb.pos.x-1]!='X'|| map[bomb.pos.y][bomb.pos.x-1]=='-'|| map[bomb.pos.y][bomb.pos.x-1]=='E' )
                 map[bomb.pos.y][bomb.pos.x-1]=' ';
+
+            if (map[bomb.pos.y+1][bomb.pos.x]!='X'|| map[bomb.pos.y+1][bomb.pos.x]=='-'|| map[bomb.pos.y+1][bomb.pos.x]=='E')
+                map[bomb.pos.y+1][bomb.pos.x]=' ';
+
+            if (map[bomb.pos.y-1][bomb.pos.x]!='X'|| map[bomb.pos.y-1][bomb.pos.x]=='-'|| map[bomb.pos.y-1][bomb.pos.x]=='E')
+                map[bomb.pos.y-1][bomb.pos.x]=' ';
+
+            if( map[bomb.pos.y][bomb.pos.x+1]='A')
+            {
+                cout<<"you lost";
+                isGameRunning = false;
+            }
+
+            if(map[bomb.pos.y][bomb.pos.x-1]='A')
+            {
+                cout<<"you lost";
+                isGameRunning = false;
+            }
