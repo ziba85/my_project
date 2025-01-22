@@ -279,3 +279,24 @@ void runGame()
         default:
             return;
         }
+
+        if(bomb.timer == 0)
+        {
+
+            if(map[bomb.pos.y][bomb.pos.x+1]='E')
+                --enemynumber;
+
+            if(map[bomb.pos.y][bomb.pos.x-1]='E')
+                --enemynumber;
+
+            if (map[bomb.pos.y+1][bomb.pos.x]='E')
+                --enemynumber;
+
+            if (map[bomb.pos.y-1][bomb.pos.x]='E')
+                --enemynumber;
+
+            if( map[bomb.pos.y][bomb.pos.x+1]!='X'|| map[bomb.pos.y][bomb.pos.x+1]=='-'|| map[bomb.pos.y][bomb.pos.x+1]=='E')
+                map[bomb.pos.y][bomb.pos.x+1]=' ';
+
+            if(map[bomb.pos.y][bomb.pos.x-1]!='X'|| map[bomb.pos.y][bomb.pos.x-1]=='-'|| map[bomb.pos.y][bomb.pos.x-1]=='E' )
+                map[bomb.pos.y][bomb.pos.x-1]=' ';
