@@ -230,3 +230,25 @@ void runGame()
                 player.pos.y -=1;
                 bomb.timer-=1;
             }
+            break;
+        case 's':
+        case 80:
+            if(player.pos.y>0 && map[player.pos.y+1][player.pos.x]!='X' && map[player.pos.y+1][player.pos.x]!='_')
+            {
+                map[player.pos.y][player.pos.x]=' ';
+                map[player.pos.y+1][player.pos.x]='A';
+                player.pos.y += 1;
+                bomb.timer-=1;
+            }
+            break;
+        case 'a':
+        case 75:
+            if(player.pos.x>0 && map[player.pos.y][player.pos.x-1]!='X' && map[player.pos.y][player.pos.x-1]!='_')
+            {
+                map[player.pos.y][player.pos.x]=' ';
+                map[player.pos.y][player.pos.x-1]='A';
+                player.pos.x -= 1;
+                bomb.timer-=1;
+            }
+
+            break;
