@@ -67,3 +67,27 @@ int main()
             case 3:
                 setDifficulty();
                 break;
+            case 4:
+             showGuide();
+                break;
+            case 5:
+                cout<<"Not available";
+                break;
+            case 6:
+                cout << "Exiting the game.\n";
+                return 0;
+            default:
+                cout << "Invalid choice. Please try again.\n";
+            }
+        return 0;
+    }
+
+
+
+int give_random()
+{
+    unsigned int seed = time(0);
+    mt19937 engine(seed);
+    uniform_int_distribution<int> dist(0, pagesize-1);
+    return dist(engine);
+}
