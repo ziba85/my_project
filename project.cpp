@@ -318,3 +318,25 @@ void runGame()
                 cout<<"you lost";
                 isGameRunning = false;
             }
+
+            if (map[bomb.pos.y+1][bomb.pos.x]='A')
+
+            {
+                cout<<"you lost";
+                isGameRunning = false;
+            }
+
+            if (map[bomb.pos.y-1][bomb.pos.x]='A')
+            {
+                cout<<"you lost";
+                isGameRunning = false;
+            }
+
+        }
+
+        if(enemynumber==0 )
+            map[exitdoor.Y][exitdoor.X]='O';
+
+
+    }
+}
