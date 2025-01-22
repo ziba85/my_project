@@ -40,3 +40,30 @@ bool isGameRunning = false;
 vector <COORD> blocks;
 
 vector<vector<char>> map(pagesize,vector<char>(pagesize,' '));
+
+int main()
+
+
+    {int choice;
+
+            cout << " << Spoon Man Game >>\n\n";
+            cout << " 1.Start Game\n";
+            cout << " 2.Load Game\n";
+            cout << " 3.Difficulty\n";
+            cout << " 4.Guide\n";
+            cout << " 5.Scoreboard\n";
+            cout << " 6.Exit\n\n";
+            cout << "Enter your choice: ";
+            cin >> choice;
+
+            switch (choice)
+            {
+            case 1:
+                runGame();
+                break;
+            case 2:
+                cout<<"Not available";
+                break;
+            case 3:
+                setDifficulty();
+                break;
