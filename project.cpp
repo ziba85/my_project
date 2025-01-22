@@ -134,3 +134,29 @@ void printmap()
         else
             --i;
     }
+    unsigned int seed = time(0);
+    mt19937 engine(seed);
+    uniform_int_distribution<int> dist(0,blocks.size()-1);
+    exitdoor=blocks[dist(engine)];
+
+
+    for(int i=0; i<enemynumber; ++i)
+    {
+        int x = give_random();
+        int y = give_random();
+
+        if(map[y][x]!='X' && map[y][x]!='A' &&  map[y][x]!='_')
+            map[y][x]='E';
+        else
+            --i;
+    }
+//showpage
+    for(int i=0; i<pagesize; ++i)
+    {
+        for(int j=0; j<pagesize; ++j)
+            cout<<map[i][j]<<' ';
+
+        cout<<endl;
+    }
+
+}
