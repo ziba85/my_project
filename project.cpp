@@ -113,3 +113,24 @@ void printmap()
         map[0][j]='*';
         map[pagesize-1][j]='*';
     }
+
+    for(int i=2; i<pagesize-1; ++i)
+        for(int j=2; i<pagesize-1; j+=2)
+            map[i][j]='X';
+
+
+    for(int i=0; i<15; ++i)
+    {
+        int x = give_random();
+        int y = give_random();
+        COORD coordinate;
+        if(map[y][x]!='X' && map[y][x]!='A')
+        {
+            map[y][x]='_';
+            coordinate.X=x;
+            coordinate.Y=y;
+            blocks.push_back(coordinate);
+        }
+        else
+            --i;
+    }
