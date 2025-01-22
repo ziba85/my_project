@@ -91,3 +91,25 @@ int give_random()
     uniform_int_distribution<int> dist(0, pagesize-1);
     return dist(engine);
 }
+
+void printmap()
+{
+    for (int i=0; i<pagesize; ++i)
+        for (int j=0; j<pagesize; ++j)
+            map[i][j]=' ';
+
+            
+    map[1][1]='A';
+    map[1][2]=' ';
+    map[2][1]=' ';
+
+    for(int i=0; i<pagesize; ++i)
+    {
+        map[i][0]='*';
+        map[i][pagesize-1]='*';
+    }
+    for(int j=0; j<pagesize-1; ++j)
+    {
+        map[0][j]='*';
+        map[pagesize-1][j]='*';
+    }
