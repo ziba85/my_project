@@ -252,3 +252,30 @@ void runGame()
             }
 
             break;
+        case 'd':
+        case 77:
+            if(player.pos.x>0 && map[player.pos.y][player.pos.x+1]!='X' && map[player.pos.y][player.pos.x+1]!='_')
+            {
+                map[player.pos.y][player.pos.x]=' ';
+                map[player.pos.y][player.pos.x+1]='A';
+                player.pos.x += 1;
+                bomb.timer-=1;
+            }
+
+            break;
+        case 'b':
+        {
+
+            bomb.pos.x = player.pos.x;
+            bomb.pos.y = player.pos.y;
+            bomb.timer=2;
+            map[bomb.pos.y][bomb.pos.x]= 'B';
+        }
+
+        break;
+        case 'm':
+            isGameRunning = false;
+            return;
+        default:
+            return;
+        }
