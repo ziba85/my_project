@@ -160,3 +160,24 @@ void printmap()
     }
 
 }
+
+void showGuide()
+{
+
+    cout << " <<Spoon Man Game>>\n";
+    cout << "\n Game Guide:\n";
+    cout << " - Move with 'W', 'A', 'S', 'D' or arrow keys.\n";
+    cout << " - Place bombs with 'B'.\n";
+    cout << " - Bombs explode after two moves.\n";
+    cout << " - Destroy enemies and find the exit 'O'.\n";
+    cout << " - Press 'M' to return to menu.\n";
+
+    getch();
+}
+
+void setDifficulty()
+{
+    char choice;
+    cout << "setDifficulty\n";
+    cout << "1. Easy\n";
+    cout << "2. Medium\n";
