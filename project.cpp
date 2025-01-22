@@ -181,3 +181,25 @@ void setDifficulty()
     cout << "setDifficulty\n";
     cout << "1. Easy\n";
     cout << "2. Medium\n";
+    cout << "3. Hard\n";
+    cout << "choose the level you want:";
+    cin >> choice;
+    switch (choice)
+    {
+    case '1':
+        pagesize = 15;
+        enemynumber=3;
+        break;
+    case '2':
+        pagesize = 20;
+        enemynumber=5;
+        break;
+    case '3':
+        pagesize = 25;
+        enemynumber=7;
+        break;
+    default:
+        cout << "Invalid choice. Please try again.\n";
+    }
+
+}
