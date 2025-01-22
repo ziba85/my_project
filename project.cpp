@@ -203,3 +203,30 @@ void setDifficulty()
     }
 
 }
+void runGame()
+{
+    player.pos.x=1;
+    player.pos.y=1;
+    isGameRunning = true;
+    char input;
+    while (isGameRunning)
+    {
+
+        printmap();
+
+        cout << "\nUse 'W', 'A', 'S', 'D' to move, 'B' to place bomb, 'M' to return to menu: ";
+        input = getch();
+        if(input>='A' && input<='Z')
+            input+=32;
+
+        switch (input)
+        {
+        case 'w':
+        case 72:
+            if( map[player.pos.y-1][player.pos.x]!='X' && map[player.pos.y-1][player.pos.x]!='_')
+            {
+                map[player.pos.y][player.pos.x]=' ';
+                map[player.pos.y-1][player.pos.x]='A';
+                player.pos.y -=1;
+                bomb.timer-=1;
+            }
